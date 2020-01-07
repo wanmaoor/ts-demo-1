@@ -34,7 +34,8 @@ interface IPhones {
 let phone: IPhones ={
   name: 'hua-wei',
   G: 5,
-  days: 251
+  days: 251,
+  fetteng: true
 }
 
 console.log(phone)

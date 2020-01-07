@@ -20,4 +20,30 @@ interface ISum {
 
 const iSum: ISum = (m, n) => m + n
 
-console.log(iSum(3,4))
+console.log(iSum(3, 4))
+
+// 可选参数
+
+interface IOptionalSum {
+  (x: number, y: number, z?: number): number
+}
+
+const iOptionalSum: IOptionalSum = (a, b, c) => {
+  if (c) {
+    return a + b + c
+  } else {
+    return a + b
+  }
+}
+
+console.log(iOptionalSum(1, 2, 3))
+console.log(iOptionalSum(11, 22))
+
+// default parameters
+
+function add(m: number, b: number = 999): number {
+  return m + b
+}
+
+console.log(add(1))
+console.log(add(1,1))

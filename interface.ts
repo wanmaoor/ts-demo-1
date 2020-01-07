@@ -9,3 +9,17 @@ const man: IPerson = {
 }
 
 console.log(man)
+
+// 可选属性
+
+interface IAnimal {
+  name: string;
+  age?: number;
+}
+
+const animal: IAnimal = {
+  name: '猪猪'
+}
+
+console.log(animal)
+

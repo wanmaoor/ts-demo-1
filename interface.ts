@@ -23,3 +23,18 @@ const animal: IAnimal = {
 
 console.log(animal)
 
+// 任意属性
+
+interface IPhones {
+  name: string;
+  G: number;
+  [prop: string]: any;
+}
+
+let phone: IPhones ={
+  name: 'hua-wei',
+  G: 5,
+  days: 251
+}
+
+console.log(phone)

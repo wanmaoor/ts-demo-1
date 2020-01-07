@@ -38,3 +38,13 @@ let phone: IPhones ={
 }
 
 console.log(phone)
+
+// 只读属性
+
+interface IFruit {
+  readonly color: string;
+}
+
+const fruit: IFruit = {
+  color: 'red'
+}

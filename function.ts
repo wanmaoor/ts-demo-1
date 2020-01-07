@@ -47,3 +47,15 @@ function add(m: number, b: number = 999): number {
 
 console.log(add(1))
 console.log(add(1,1))
+
+// 剩余参数
+
+function push(array: number[], ...items: number[]) {
+  items.forEach(function(item) {
+    array.push(item);
+  });
+}
+
+let a = [];
+push(a, 1, 2, 3);
+console.log(a)

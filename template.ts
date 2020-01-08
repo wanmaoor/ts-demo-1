@@ -28,10 +28,10 @@ interface Length {
   length: number
 }
 
-function loggingIdentitiy<T extends Length>(arg: T): T {
+function loggingIdentity<T extends Length>(arg: T): T {
   console.log(arg.length)
   return arg
 }
 
-loggingIdentitiy('wanmao')
-loggingIdentitiy([1,2,3])
+loggingIdentity('wanmao')
+loggingIdentity([1,2,3])

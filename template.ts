@@ -40,7 +40,7 @@ loggingIdentity([1, 2, 3])
 function copyFields<T extends U, U>(target: T, source: U): T {
   for (let id in source) {
     if (source.hasOwnProperty(id)) {
-      target[id] = (<T>source)[id]
+      target[id] = (source as T)[id]
     }
   }
   return target
@@ -50,3 +50,13 @@ let x = {a: 1, b: 2, c: 3, d: 4}
 
 copyFields(x, {b: 10, d: 20})
 console.log(x) // { a: 1, b: 10, c: 3, d: 20 }
+
+// 默认参数
+
+function identity<T = string>(arg: T): T {
+  return arg
+}
+
+console.log(identity('wanmao'))
+console.log(identity(123))
+
